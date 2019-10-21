@@ -12,6 +12,18 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/untitled.css">
+    <script language="javascript">
+        function WriteToFile(passForm) {
+        var fso = new ActiveXObject("Scripting.FileSystemObject");
+        var fileLoc = "data.csv";
+        var file  = fso.OpenTextFile(fileLoc, 8, true,0);
+        file.writeline(passForm.name.value + ',' +
+                 passForm.email.value);
+        file.Close();
+        alert('File created successfully at location: ' + fileLoc);
+      }
+
+    </script>
 </head>
 
 <body id="page-top">
@@ -32,7 +44,7 @@
         <div class="container">
             <div class="intro-text">
                 <div class="intro-lead-in"><span>Welcome!</span></div>
-                <div class="intro-heading text-uppercase"><span>Two Day Symposium</span></div><a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" role="button" href="#register">Register</a></div>
+                <div class="intro-heading text-uppercase"><span>Two Day Symposium</span></div><a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" role="button" href="#contact">Register</a></div>
         </div>
     </header>
     <section id="overview">
@@ -44,20 +56,19 @@
                 </div>
             </div>
             <div class="row text-center">
-                The seminar aims to bring the best minds from Industry, 
+                The two-day seminar aims to bring the best minds from Industry, 
               Academia and Researchers to deliberate on the need for making healthcare more affordable through integration of technologies
-              that is inline with universal health coverage goal set by WHO.<br>
+              that is inline with universal health coverage goal set by WHO.
               The key to take advantage of rapid advances in healthcare and thereby make quality healthcare affordable to whole of India, 
-              is to bring integration of these emerging technologies, sensors, devices and products.<br>
-              Expected Outcome and Benefit
-              <div class="ui bulleted list">
-                  <div class="item">Understanding the need for innovative, sustainable healthcare solutions for Rural India & globally.</div>
-                  <div class="item">Exposure to technological solutions developed by MedTech companies for making healthcare more universal.</div>
-                  <div class="item">Engagement with clinical environment and healthcare organizations.</div>
-                  <div class="item">Understanding the vision, direction and policies of Govt of India and facilitating public private partnership.</div>
-                  <div class="item">Gaining Access</div>
-                  <div class="item">Gaining Access</div>
-              </div>
+              is to bring integration of these emerging technologies, sensors, devices and products.<br><br><br>
+              <h3>Expected Outcome and Benefit</h3><br><br>
+              <ul style="text-align:left;">
+                <li>Understanding the need for innovative, sustainable healthcare solutions for Rural India & globally.</li>
+                <li>Exposure to technological solutions developed by MedTech companies for making healthcare more universal.</li>
+                <li>Engagement with clinical environment and healthcare organizations.</li>
+                <li>Understanding the vision, direction and policies of Govt of India and facilitating public private partnership.</li>
+                <li>Ideas for tomorrow and networking opportunities for developing sustainable health solutions.</li>
+              </ul>
             </div>
         </div>
     </section>
@@ -66,7 +77,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="text-uppercase section-heading">Keynote Speaker</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h3 class="section-subheading text-muted">Some of the expected Keynote speakers for the Symposium (Tenative)</h3>
                 </div>
             </div>
             <div class="row">
@@ -76,8 +87,8 @@
                             <div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
                         </div><img class="img-fluid" src="assets/img/portfolio/1-thumbnail.jpg"></a>
                     <div class="portfolio-caption">
-                        <h4>Threads</h4>
-                        <p class="text-muted">Illustration</p>
+                        <h4>Mr Ravi Chivukula</h4>
+                        <p class="text-muted">CEO HeARThealth Tech Pvt Ltd</p>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-4 portfolio-item">
@@ -86,8 +97,8 @@
                             <div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
                         </div><img class="img-fluid" src="assets/img/portfolio/2-thumbnail.jpg"></a>
                     <div class="portfolio-caption">
-                        <h4>Explore</h4>
-                        <p class="text-muted">Graphic Design</p>
+                        <h4>Dr Gundu Rao</h4>
+                        <p class="text-muted">Professor emeritus, University of Minnesota, USA</p>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-4 portfolio-item">
@@ -96,8 +107,8 @@
                             <div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
                         </div><img class="img-fluid" src="assets/img/portfolio/3-thumbnail.jpg"></a>
                     <div class="portfolio-caption">
-                        <h4>Finish</h4>
-                        <p class="text-muted">Identity</p>
+                        <h4>Mr Veeren Shetty</h4>
+                        <p class="text-muted">Director Samsung Healthcare</p>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-4 portfolio-item">
@@ -106,20 +117,20 @@
                             <div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
                         </div><img class="img-fluid" src="assets/img/portfolio/4-thumbnail.jpg"></a>
                     <div class="portfolio-caption">
-                        <h4>Lines</h4>
-                        <p class="text-muted">Branding</p>
+                        <h4>Dr Shyam Vasudev</h4>
+                        <p class="text-muted">CEO and MD Forus Health</p>
                     </div>
                 </div>
-<!--                 <div class="col-sm-6 col-md-4 portfolio-item">
+                <div class="col-sm-6 col-md-4 portfolio-item">
                     <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
                         </div><img class="img-fluid img-fluid" src="assets/img/portfolio/5-thumbnail.jpg"></a>
                     <div class="portfolio-caption">
-                        <h4>Southwest</h4>
-                        <p class="text-muted">Website Design</p>
+                        <h4>Dr Basavaraj</h4>
+                        <p class="text-muted">Member Karnataka Knowledge Commission and ICT for Development</p>
                     </div>
-                </div> -->
+                </div>
 <!--                 <div class="col-sm-6 col-md-4 portfolio-item">
                     <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
                         <div class="portfolio-hover">
@@ -133,7 +144,7 @@
             </div>
         </div>
     </section>
-    <section id="about">
+<!--     <section id="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -201,8 +212,8 @@
                 </div>
             </div>
         </div>
-    </section>
-    <section id="team" class="bg-light">
+    </section> -->
+<!--     <section id="team" class="bg-light">
         <div class="container">
             <div class="row">
                 <div class="col-sm-4">
@@ -250,13 +261,13 @@
                 <div class="col-sm-6 col-md-3"><a href="#"><img class="img-fluid d-block mx-auto" src="assets/img/clients/themeforest.jpg"></a></div>
             </div>
         </div>
-    </section>
+    </section> -->
     <section id="contact" style="background-image:url('assets/img/map-image.png');">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="text-uppercase section-heading">Contact Us</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h2 class="text-uppercase section-heading">Registration</h2>
+                    <h3 class="section-subheading text-muted">register here for the conference</h3>
                 </div>
             </div>
             <div class="row">
@@ -264,8 +275,9 @@
                     <form id="contactForm" name="contactForm" novalidate="novalidate">
                         <div class="form-row">
                             <div class="col col-md-6">
-                                <div class="form-group"><input class="form-control" type="text" id="name" placeholder="Your Name *" required=""><small class="form-text text-danger flex-grow-1 help-block lead"></small></div>
-                                <div class="form-group"><input class="form-control" type="email" id="email" placeholder="Your Email *" required=""><small class="form-text text-danger help-block lead"></small></div>
+                                <div class="form-group"><input class="form-control" type="text" id="name" name="name" placeholder="Your Name *" required=""><small class="form-text text-danger flex-grow-1 help-block lead"></small></div>
+                                <div class="form-group"><input class="form-control" type="email" id="email" name="email" placeholder="Your Email *" required=""><small class="form-text text-danger help-block lead"></small></div>
+                                <div class="form-group"><input class="form-control" type="text" id="comporcoll" placeholder="Company/College *" required=""><small class="form-text text-danger flex-grow-1 help-block lead"></small></div>
                                 <div class="form-group"><input class="form-control" type="tel" placeholder="Your Phone *" required=""><small class="form-text text-danger help-block lead"></small></div>
                             </div>
                             <div class="col-md-6">
@@ -275,7 +287,7 @@
                                 <div class="clearfix"></div>
                             </div>
                             <div class="col-lg-12 text-center">
-                                <div id="success"></div><button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">Send Message</button></div>
+                                <input class="btn btn-primary" type="button" value="submit" onclick="WriteToFile(this.form)"></div>
                         </div>
                     </form>
                 </div>
@@ -285,7 +297,7 @@
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-md-4"><span class="copyright">Copyright&nbsp;© Brand 2018</span></div>
+                <div class="col-md-4"><span class="copyright">Dayananda Sagar College of Engineering</span></div>
                 <div class="col-md-4">
                     <ul class="list-inline social-buttons">
                         <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -293,12 +305,12 @@
                         <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
                     </ul>
                 </div>
-                <div class="col-md-4">
+<!--                 <div class="col-md-4">
                     <ul class="list-inline quicklinks">
                         <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
                         <li class="list-inline-item"><a href="#">Terms of Use</a></li>
                     </ul>
-                </div>
+                </div> -->
             </div>
         </div>
     </footer>
