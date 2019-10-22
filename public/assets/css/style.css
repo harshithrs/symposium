@@ -1,0 +1,12 @@
+#mainNav .navbar-brand {
+  /*body {  overflow-x: hidden;*/
+  font-family: Roboto Slab,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.intro-text {
+  text-shadow: 2px 2px #000000;
+}
+
+#register-button {
+  text-shadow: none;
+}
