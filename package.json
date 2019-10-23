@@ -18,12 +18,15 @@
   },
   "homepage": "https://github.com/harshithrs/symposium#readme",
   "dependencies": {
+    "alert-node": "^2.0.1",
     "body-parser": "^1.19.0",
     "bootstrap": "^4.3.1",
+    "ejs": "^2.7.1",
     "expose-loader": "^0.7.5",
     "express": "^4.17.1",
     "jquery": "^3.4.1",
     "nodemon": "^1.19.4",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "popups": "^1.1.3"
   }
 }

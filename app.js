@@ -2,10 +2,16 @@ var express =require('express');
 var app = express();
 var path =require("path");
 var fs = require('fs');
-
+// var popup = require('popups');
+var alert =require('alert-node');
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
 
+const ejs =require('ejs');
+
+app.engine('html', ejs.renderFile);
+app.set('views',path.join(__dirname, 'views'));
+app.set('view engine', 'html');
  
 app.get("/",function(req,res){
     res.sendFile(path.join(__dirname,'./views',  'index.html'));
@@ -24,13 +30,12 @@ app.listen(3000,function(err){
 
 app.post('/', function (req, res) {
     console.log(req.body);
-    var fields = ['Name', 'College/Company', 'Email', 'Phone Number', 'Questions/Remarks'];
+    var fields = ['Name', 'Email', 'Phone Number', 'Questions/Remarks'];
     var name = req.body.name;
     var email = req.body.email;
     var phnum = req.body.phonenumber;
-    var msg = req.body.message; 
-    var coll = req.body.comporcoll;
-    var data = [name, coll, email, phnum, msg];
+    var msg = req.body.message;
+    var data = [name, email, phnum, msg];
 
     fs.stat('Registered_data.csv', function (err, stat) {
     if (err == null) {
@@ -42,6 +47,8 @@ app.post('/', function (req, res) {
         fs.appendFile('Registered_data.csv', data, function (err) {
             if (err) throw err;
             console.log('The data was appended to file!');
+            // alert(" Registration successfull")
+            res.render('index');
         });
     }
 
@@ -53,8 +60,14 @@ app.post('/', function (req, res) {
         fs.writeFile('Registered_data.csv', fields, function (err) {
             if (err) throw err;
             console.log('File created and updated.');
+            // alert(" Registration successfully ")
+            res.render('index');
         });
     }
     })
-    res.send();
+    // popup.alert({
+    //     content: 'Hello!'
+    // });
+   
+   
   });
