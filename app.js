@@ -24,12 +24,13 @@ app.listen(3000,function(err){
 
 app.post('/', function (req, res) {
     console.log(req.body);
-    var fields = ['Name', 'Email', 'Phone Number', 'Questions/Remarks'];
+    var fields = ['Name', 'College/Company', 'Email', 'Phone Number', 'Questions/Remarks'];
     var name = req.body.name;
     var email = req.body.email;
     var phnum = req.body.phonenumber;
-    var msg = req.body.message;
-    var data = [name, email, phnum, msg];
+    var msg = req.body.message; 
+    var coll = req.body.comporcoll;
+    var data = [name, coll, email, phnum, msg];
 
     fs.stat('Registered_data.csv', function (err, stat) {
     if (err == null) {
