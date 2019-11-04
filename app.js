@@ -29,7 +29,7 @@ app.listen(3000,function(err){
 
 
 app.post('/', function (req, res) {
-    console.log(req.body);
+    // console.log(req.body);
     var fields = ['Name', 'Email', 'Phone Number', 'Questions/Remarks'];
     var name = req.body.name;
     var email = req.body.email;
