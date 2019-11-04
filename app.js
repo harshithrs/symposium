@@ -30,12 +30,13 @@ app.listen(3000,function(err){
 
 app.post('/', function (req, res) {
     // console.log(req.body);
-    var fields = ['Name', 'Email', 'Phone Number', 'Questions/Remarks'];
+    var fields = ['Name', 'Email', 'Company/College', 'Phone Number', 'Questions/Remarks'];
     var name = req.body.name;
     var email = req.body.email;
+    var compcoll = req.body.comporcoll;
     var phnum = req.body.phonenumber;
     var msg = req.body.message;
-    var data = [name, email, phnum, msg];
+    var data = [name, email, compcoll, phnum, msg];
 
     fs.stat('Registered_data.csv', function (err, stat) {
     if (err == null) {
@@ -60,8 +61,8 @@ app.post('/', function (req, res) {
         fs.writeFile('Registered_data.csv', fields, function (err) {
             if (err) throw err;
             console.log('File created and updated.');
-            // alert(" Registration successfully ")
             res.render('index');
+            alert(" Registered successfully.");
         });
     }
     })
