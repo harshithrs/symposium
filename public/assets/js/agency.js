@@ -20,6 +20,18 @@
     $('.navbar-collapse').collapse('hide');
   });
 
+  $(window).scroll(function() {
+    if ($(this).scrollTop()) {
+        $('#toTop').fadeIn();
+    } else {
+        $('#toTop').fadeOut();
+    }
+  });
+
+  $("#toTop").click(function () {
+    $("html, body").animate({scrollTop: 0}, 500);});
+
+
   // Activate scrollspy to add active class to navbar items on scroll
   $('body').scrollspy({
     target: '#mainNav',

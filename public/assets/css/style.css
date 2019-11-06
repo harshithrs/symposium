@@ -3,10 +3,67 @@
   font-family: Roboto Slab,Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 
-.intro-text {
+#toTop{
+  margin: 10px;
+  font-size: 30px;
+  position: fixed;
+  bottom: 5px;
+  right: 15px;
+  z-index: 1000;
+  display: none;
+}
+
+#dscelogo {
+  width:50px;
+}
+
+#note1 {
+  font-size: 20px; 
+  background-color: rgba(210, 210, 210, 0.4);
+  border-radius: 5px; 
+  padding: 5px;
+  margin: 15px;
+}
+
+.inttext {
+  font-family: "Lucida Bright";
   text-shadow: 2px 2px #000000;
+  font-size: 100px;
+  line-height: 100px;
+}
+
+.card-img-top {
+  padding: 5px;
+  border-radius: 7px;
+}
+
+.card-title {
+  text-align: center;
+}
+
+.logos {
+  bottom: 0;
+  position: absolute;
+  font-size: 40px;
 }
 
 #register-button {
   text-shadow: none;
+}
+
+@media screen and (max-width:800px){
+  .inttext {
+    font-size: 40px;
+    display: inline-block;
+    line-height: 45px;
+  }
+
+  #dscelogo {
+    width:70px;
+  }
+
+  #toTop {
+    font-size: 25px;
+    right: 10px;
+  }
 }
